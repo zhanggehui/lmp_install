@@ -1,8 +1,11 @@
+#!/bin/bash
+
 export PATH=/appsnew/usr/cmake/cmake-3.14.3/bin:$PATH
 source /appsnew/source/intel2018.sh
 source /appsnew/source/zlib-1.2.11.sh
 source /appsnew/source/Python-3.7.3.sh
 source /appsnew/source/netcdf-c-4.7.0_intel2018.sh
+export CCFLAGS = -g -O3 -std=c++11
 
 # 42User_package 33Standard_package
 cmake -DBUILD_MPI=yes -DBUILD_OMP=yes  \
