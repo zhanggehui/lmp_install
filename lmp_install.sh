@@ -11,7 +11,6 @@ export CCFLAGS='-g -O3 -std=c++11'
 cmake -DBUILD_MPI=yes -DBUILD_OMP=yes  \
 -DCMAKE_C_COMPILER=icc -DCMAKE_CXX_COMPILER=icpc -DCMAKE_Fortran_COMPILER=ifort \
 -DMPI_C_COMPILER=mpiicc -DMPI_CXX_COMPILER=mpiicpc \
--DBUILD_TOOLS=yes -DBUILD_LAMMPS_SHELL=yes \
 \
 -DFFT=mkl \
 \
@@ -38,6 +37,7 @@ cmake -DBUILD_MPI=yes -DBUILD_OMP=yes  \
 -DCMAKE_INSTALL_PREFIX=../install \
 ../cmake
 
+#-DBUILD_TOOLS=yes -DBUILD_LAMMPS_SHELL=yes 
 #-DPYTHON_EXECUTABLE=/appsnew/usr/python/Python-3.7.3/virtualenv/bin/python3
 #-DPKG_COMPRESS=yes -DPKG_GPU=yes  -DPKG_KIM=yes -DPKG_KOKKOS=yes -DPKG_LATTE=yes -DPKG_MESSAGE=yes 
 #-DPKG_MSCG=yes -DPKG_OPT=yes -DPKG_POEMS=yes -DPKG_PYTHON=yes -DPKG_VORONOI=yes  
