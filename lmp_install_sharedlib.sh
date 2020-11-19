@@ -10,14 +10,16 @@ export CCFLAGS='-g -O3 -std=c++11'
 cmake -DBUILD_MPI=yes -DBUILD_OMP=yes  \
 -DCMAKE_C_COMPILER=icc -DCMAKE_CXX_COMPILER=icpc -DCMAKE_Fortran_COMPILER=ifort \
 -DMPI_C_COMPILER=mpiicc -DMPI_CXX_COMPILER=mpiicpc \
-\
+-DCMAKE_CXX_FLAGS='-g -O3 -std=c++11' -DBUILD_SHARED_LIBS=yes \
 -DFFT=mkl \
 \
 -DPKG_PYTHON=yes \
 -DPKG_OPT=yes -DPKG_POEMS=yes -DPKG_COMPRESS=yes\
--DPKG_USER-INTEL=yes \
+\
+-DPKG_USER-INTEL=yes -DINTEL_LRT_MODE=c++11\
+-DPKG_USER-PLUMED=yes -DDOWNLOAD_PLUMED=yes -D PLUMED_MODE=shared \
 -DPKG_USER-ATC=yes -DPKG_USER-AWPMD=yes -DPKG_USER-COLVARS=yes \
--DPKG_USER-OMP=yes \
+-DPKG_USER-OMP=yes -DPKG_MESSAGE=yes -DPKG_USER-MOLFILE=yes \
 \
 -DPKG_ASPHERE=yes -DPKG_BODY=yes -DPKG_CLASS2=yes -DPKG_COLLOID=yes -DPKG_CORESHELL=yes \
 -DPKG_DIPOLE=yes -DPKG_GRANULAR=yes -DPKG_KSPACE=yes -DPKG_MANYBODY=yes -DPKG_MC=yes \
@@ -34,10 +36,11 @@ cmake -DBUILD_MPI=yes -DBUILD_OMP=yes  \
 -DPKG_USER-SDPD=yes -DPKG_USER-SMTBQ=yes -DPKG_USER-SPH=yes \
 -DPKG_USER-TALLY=yes -DPKG_USER-UEF=yes -DPKG_USER-YAFF=yes \
 \
--DCMAKE_INSTALL_PREFIX=../install \
-../cmake && make -j10 && make install
+-DCMAKE_INSTALL_PREFIX=../cns_install \
+../../cmake && make -j10 && make install
 
 deactivate
+
 
 #-DBUILD_TOOLS=yes -DBUILD_LAMMPS_SHELL=yes 加入这句会显示找不到readline
 
