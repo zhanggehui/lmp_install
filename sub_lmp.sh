@@ -1,9 +1,9 @@
 #!/bin/bash
 #SBATCH -J lmp
-#SBATCH -p cn_nl
+#SBATCH -p cn-long
 #SBATCH -N 1
-#SBATCH --qos=liufengcnnl
-#SBATCH --ntasks-per-node=28
+#SBATCH --qos=liufengcnl
+#SBATCH --ntasks-per-node=20
 #SBATCH -o 1.out
 #SBATCH -e 2.err
 #SBATCH --no-requeue
