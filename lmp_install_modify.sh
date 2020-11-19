@@ -2,7 +2,7 @@
 cd /home/liufeng_pkuhpc/lustre2/lammps_modify/build_modify && \
 rm -rf * && rm -rf ../install_modify
 
-mv /home/liufeng_pkuhpc/lustre2/lammps_modify/src/MC/lmp_newatomswap/fix* \
+mv -f /home/liufeng_pkuhpc/lustre2/lammps_modify/src/MC/lmp_newatomswap/fix* \
 /home/liufeng_pkuhpc/lustre2/lammps_modify/src/MC/
 
 rm -rf /home/liufeng_pkuhpc/lustre2/lammps_modify/src/MC/lmp_newatomswap
