@@ -4,7 +4,6 @@ export PATH=/appsnew/usr/cmake/cmake-3.14.3/bin:$PATH
 source /appsnew/source/intel2018.sh
 source /appsnew/source/zlib-1.2.11.sh
 source /appsnew/source/Python-3.7.3.sh
-
 export CCFLAGS='-g -O3 -std=c++11'
 
 # 42User_package 33Standard_package
@@ -15,7 +14,8 @@ cmake -DBUILD_MPI=yes -DBUILD_OMP=yes  \
 -DFFT=mkl \
 \
 -DPKG_PYTHON=yes \
--DPKG_OPT=yes -DPKG_POEMS=yes\
+-DPKG_OPT=yes -DPKG_POEMS=yes -DPKG_COMPRESS=yes\
+-DPKG_USER-INTEL=yes \
 -DPKG_USER-ATC=yes -DPKG_USER-AWPMD=yes -DPKG_USER-COLVARS=yes \
 -DPKG_USER-OMP=yes \
 \
@@ -35,10 +35,14 @@ cmake -DBUILD_MPI=yes -DBUILD_OMP=yes  \
 -DPKG_USER-TALLY=yes -DPKG_USER-UEF=yes -DPKG_USER-YAFF=yes \
 \
 -DCMAKE_INSTALL_PREFIX=../install \
-../cmake
+../cmake && make -j10 && make install
 
-#-DBUILD_TOOLS=yes -DBUILD_LAMMPS_SHELL=yes 
-#-DPYTHON_EXECUTABLE=/appsnew/usr/python/Python-3.7.3/virtualenv/bin/python3
+deactivate
+
+#-DBUILD_TOOLS=yes -DBUILD_LAMMPS_SHELL=yes 加入这句会显示找不到readline
+
+#-DPYTHON_EXECUTABLE=/appsnew/usr/python/Python-3.7.3/virtualenv/bin/python3 可以使用环境
+
 #-DPKG_COMPRESS=yes -DPKG_GPU=yes  -DPKG_KIM=yes -DPKG_KOKKOS=yes -DPKG_LATTE=yes -DPKG_MESSAGE=yes 
 #-DPKG_MSCG=yes -DPKG_OPT=yes -DPKG_POEMS=yes -DPKG_PYTHON=yes -DPKG_VORONOI=yes  
 
