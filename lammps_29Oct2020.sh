@@ -3,9 +3,9 @@ source /appsnew/source/intel2018.sh
 
 processor_num=`cat /proc/cpuinfo| grep "processor"| wc -l`
 if [ $# -ge 1 ]; then    
-    if [ $1 == 'cnnl' ]; then
+    if [ $1 == 'cn_nl' ]; then
         source /home/liufeng_pkuhpc/lustre2/zgh/zgh_lmp/lmp_install/lammps_cnnl.sh
-    elif [ $1 == 'cns' ]; then
+    elif [ $1 == 'cn-short' ]; then
         source /home/liufeng_pkuhpc/lustre2/zgh/zgh_lmp/lmp_install/lammps_cns.sh
     else
         echo 'No such version!'
