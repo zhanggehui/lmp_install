@@ -1,4 +1,3 @@
-export PATH=/appsnew/usr/cmake/cmake-3.14.3/bin:$PATH
 source /appsnew/source/intel2018.sh
 
 processor_num=`cat /proc/cpuinfo| grep "processor"| wc -l`

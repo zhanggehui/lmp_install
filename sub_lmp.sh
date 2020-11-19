@@ -13,5 +13,6 @@
 hosts=`scontrol show hostname $SLURM_JOB_NODELIST`; echo $hosts
 
 source /home/liufeng_pkuhpc/lustre2/zgh/zgh_lmp/lmp_install/lammps_29Oct2020.sh
+#source /home/liufeng_pkuhpc/lustre2/zgh/zgh_lmp/lmp_install/lmp_install_modify.sh
 
 mpirun -np $SLURM_NTASKS lmp -in step4.2_annealing.inp
