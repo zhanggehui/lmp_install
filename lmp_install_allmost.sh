@@ -36,7 +36,7 @@ cmake -DBUILD_MPI=yes -DBUILD_OMP=yes  \
 -DPKG_USER-SDPD=yes -DPKG_USER-SMTBQ=yes -DPKG_USER-SPH=yes \
 -DPKG_USER-TALLY=yes -DPKG_USER-UEF=yes -DPKG_USER-YAFF=yes \
 \
--DCMAKE_INSTALL_PREFIX=../install \
+-DCMAKE_INSTALL_PREFIX=../cnnl_almost \
 ../cmake && make -j10 && make install
 
 deactivate
