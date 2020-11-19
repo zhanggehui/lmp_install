@@ -17,7 +17,7 @@ cmake -DBUILD_MPI=yes -DBUILD_OMP=yes  \
 -DPKG_OPT=yes -DPKG_POEMS=yes -DPKG_COMPRESS=yes\
 \
 -DPKG_USER-INTEL=yes -DINTEL_LRT_MODE=c++11\
--DPKG_USER-PLUMED=yes -DDOWNLOAD_PLUMED=yes -D PLUMED_MODE=shared \
+-DPKG_USER-PLUMED=yes -DDOWNLOAD_PLUMED=yes -DPLUMED_MODE=shared \
 -DPKG_USER-ATC=yes -DPKG_USER-AWPMD=yes -DPKG_USER-COLVARS=yes \
 -DPKG_USER-OMP=yes -DPKG_MESSAGE=yes -DPKG_USER-MOLFILE=yes \
 \
@@ -36,7 +36,7 @@ cmake -DBUILD_MPI=yes -DBUILD_OMP=yes  \
 -DPKG_USER-SDPD=yes -DPKG_USER-SMTBQ=yes -DPKG_USER-SPH=yes \
 -DPKG_USER-TALLY=yes -DPKG_USER-UEF=yes -DPKG_USER-YAFF=yes \
 \
--DCMAKE_INSTALL_PREFIX=../cnnl_install \
+-DCMAKE_INSTALL_PREFIX=../cns_install \
 ../../cmake && make -j10 && make install
 
 deactivate
