@@ -2,7 +2,7 @@
 #SBATCH -J lmp_
 #SBATCH -p cn_nl
 #SBATCH -N 4
-#SBATCH --qos=liufengcnl
+#SBATCH --qos=liufengcnnl
 #SBATCH --ntasks-per-node=28
 #SBATCH -o 1.out
 #SBATCH -e 2.err
