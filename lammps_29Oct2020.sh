@@ -3,7 +3,7 @@ source /appsnew/source/intel2018.sh
 processor_num=`cat /proc/cpuinfo| grep "processor"| wc -l`
 #echo $processor_num
 
-if [ $# -ge 1 ]; then
+if [ $# -ge 1 ] &&  [ $1 != auto ]; then
     if [ $1 == cnnl ]; then
         source /home/liufeng_pkuhpc/lustre2/zgh/zgh_lmp/lmp_use/lammps_cnnl.sh
     else
