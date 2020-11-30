@@ -1,8 +1,8 @@
 #!/bin/bash
 #SBATCH -J lmp_
-#SBATCH -p cn-short
+#SBATCH -p cn-long
 #SBATCH -N 4
-#SBATCH --qos=liufengcns
+#SBATCH --qos=cnl
 #SBATCH --ntasks-per-node=20
 #SBATCH -o 1.out
 #SBATCH -e 2.err
