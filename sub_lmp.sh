@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH -J lmp_
+#SBATCH -J lmp_job
 #SBATCH -p cn-short
 #SBATCH -N 2
 #SBATCH --qos=liufengcns
