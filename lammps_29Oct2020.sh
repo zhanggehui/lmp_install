@@ -14,6 +14,6 @@ else
     fi
 fi
 export PATH=/home/liufeng_pkuhpc/lustre2/lammps-29Oct20/static_build/"$cnword"_install/bin:$PATH 
-export LD_LIBRARY_PATH=/home/liufeng_pkuhpc/lustre2/lammps-29Oct20/static_build/cnnl_build/plumed_build-prefix/lib:$LD_LIBRARY_PATH 
-source /home/liufeng_pkuhpc/lustre2/lammps-29Oct20/static_build/"$cnword"_build/etc/profile.d/lammps.sh
+export LD_LIBRARY_PATH=/home/liufeng_pkuhpc/lustre2/lammps-29Oct20/static_build/"$cnword"_build/plumed_build-prefix/lib:$LD_LIBRARY_PATH 
+source /home/liufeng_pkuhpc/lustre2/lammps-29Oct20/static_build/"$cnword"_install/etc/profile.d/lammps.sh
 echo "lammps $cnword version"
