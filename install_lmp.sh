@@ -56,9 +56,9 @@ fi
 # 42 User_package 33 Standard_package
 #-DBUILD_TOOLS=yes -DBUILD_LAMMPS_SHELL=yes 加入这句会显示找不到readline
 #-DPYTHON_EXECUTABLE=/appsnew/usr/python/Python-3.7.3/virtualenv/bin/python3 可以使用virtualenv
+
 #-DPKG_GPU=yes -DPKG_KOKKOS=yes 
-#-DPKG_KIM=yes -DPKG_MSCG=yes -DPKG_VORONOI=yes -DPKG_LATTE=yes -DPKG_MESSAGE=yes 
+#-DPKG_KIM=yes -DPKG_MSCG=yes -DPKG_VORONOI=yes -DPKG_LATTE=yes
 #-DPKG_USER-ADIOS=yes -DPKG_USER-H5MD=yes  -DPKG_USER-NETCDF=yes 
-#-DPKG_USER-PLUMED=yes -DPKG_USER-QMMM=yes -DPKG_USER-QUIP=yes 
+#-DPKG_USER-QMMM=yes -DPKG_USER-QUIP=yes 
 #-DPKG_USER-SCAFACOS=yes -DPKG_USER-SMD=yes -DPKG_USER-VTK=yes  
-#-DPKG_=yes
