@@ -1,4 +1,4 @@
-word1=static # static shared 后面记得改变cmake编译条件
+word1=static # static shared  若想以shared库编译,记得改变cmake编译条件
 
 processor_num=`cat /proc/cpuinfo| grep "processor"| wc -l`
 if [ ${processor_num} -eq 56 ] || [ ${processor_num} -eq 28 ]; then
@@ -11,13 +11,12 @@ dir1="${word1}_build"
 dir2="${word2}_build"
 if [ ! -d "./${dir1}/${dir2}" ]; then
     mkdir -p ${dir1}/${dir2}
-    cd ${dir1}/${dir2}
+    cd ./${dir1}/${dir2}
     export PATH=/appsnew/usr/cmake/cmake-3.14.3/bin:$PATH
     source /appsnew/source/intel2018.sh
     source /appsnew/source/zlib-1.2.11.sh
     source /appsnew/source/Python-3.8.6.sh
     export CCFLAGS='-g -O3 -std=c++11'
-    # 42 User_package 33 Standard_package
     cmake -DBUILD_MPI=yes -DBUILD_OMP=yes  \
     -DCMAKE_C_COMPILER=icc -DCMAKE_CXX_COMPILER=icpc -DCMAKE_Fortran_COMPILER=ifort \
     -DMPI_C_COMPILER=mpiicc -DMPI_CXX_COMPILER=mpiicpc \
@@ -54,6 +53,7 @@ else
     'Already build! Please make sure!'
 fi
 
+# 42 User_package 33 Standard_package
 #-DBUILD_TOOLS=yes -DBUILD_LAMMPS_SHELL=yes 加入这句会显示找不到readline
 #-DPYTHON_EXECUTABLE=/appsnew/usr/python/Python-3.7.3/virtualenv/bin/python3 可以使用virtualenv
 #-DPKG_GPU=yes -DPKG_KOKKOS=yes 
