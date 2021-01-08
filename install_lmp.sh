@@ -10,7 +10,6 @@ fi
 dir1="${word1}_build"
 dir2="${word2}_build"
 if [ ! -d "./${dir1}/${dir2}" ]; then
-    cd /home/liufeng_pkuhpc/lustre2/zgh/zgh_lmp/lmp_use/ ; gitget ; cd $OLDPWD
     mkdir -p ${dir1}/${dir2}
     cd ${dir1}/${dir2}
     export PATH=/appsnew/usr/cmake/cmake-3.14.3/bin:$PATH
