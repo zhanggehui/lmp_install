@@ -15,4 +15,4 @@ else
 fi
 export PATH=/home/liufeng_pkuhpc/lustre2/lammps-29Oct20/static_build/"$cnword"_install/bin:$PATH 
 source /home/liufeng_pkuhpc/lustre2/lammps-29Oct20/static_build/"$cnword"_build/etc/profile.d/lammps.sh
-echo "lammps $word version"
+echo "lammps $cnword version"
